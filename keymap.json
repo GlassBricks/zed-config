@@ -1,0 +1,94 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace || Editor || vim_mode == normal",
+    "bindings": {
+      "ctrl-/": "terminal_panel::ToggleFocus",
+      "ctrl-shift-left": "workspace::ActivatePaneLeft",
+      "ctrl-shift-right": "workspace::ActivatePaneRight",
+      "ctrl-shift-up": "workspace::ActivatePaneUp",
+      "ctrl-shift-down": "workspace::ActivatePaneDown"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-shift-backspace": "workspace::CloseActiveDock"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-backspace": "pane::CloseActiveItem"
+    }
+  },
+  {
+    "context": "(Workspace || Editor) && vim_mode == normal",
+    "bindings": {
+      // copy some things from lazyvim
+      "space space": "file_finder::Toggle",
+      "space f f": "file_finder::Toggle",
+      "space e": "pane::RevealInProjectPanel",
+      "space s g": "workspace::NewSearch",
+      "space c a": "outline_panel::ToggleFocus",
+      "space a c": "agent::ToggleFocus",
+      "space a t": "agent::NewTextThread",
+      "space a k": "agent::Keep",
+      "space a K": "agent::KeepAll",
+      "space a r": "agent::Reject",
+      "space a R": "agent::RejectAll",
+      "'": "vim::RepeatFind",
+      ";": ["vim::PushJump", { "line": true }]
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "alt-left": "pane::ActivatePreviousItem",
+      "alt-right": "pane::ActivateNextItem",
+      "alt-backspace": "pane::CloseActiveItem",
+      "alt-shift-backspace": "workspace::CloseInactiveTabsAndPanes"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "Home": "vim::FirstNonWhitespace",
+      "ctrl-n": "editor::ShowEditPrediction",
+      "ctrl-j": "editor::AcceptEditPrediction",
+      "ctrl-l": "editor::AcceptPartialEditPrediction",
+      "alt-enter": "editor::ToggleCodeActions",
+      "ctrl-shift-alt-up": "vim::SelectLargerSyntaxNode",
+      "ctrl-shift-alt-down": "vim::SelectSmallerSyntaxNode"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "a": "project_panel::NewFile",
+      "A": "project_panel::NewDirectory",
+      "d": "project_panel::Delete",
+      "r": "project_panel::Rename",
+      "y": "project_panel::Copy",
+      "x": "project_panel::Cut",
+      "p": "project_panel::Paste",
+      "P": "project_panel::Open",
+      "c": "workspace::CopyPath",
+      "q": "workspace::CloseActiveDock",
+      "G": "project_panel::ToggleHideGitIgnore",
+      "backspace": "project_panel::SelectParent"
+    }
+  },
+  {
+    "context": "Editor && edit_prediction",
+    "bindings": {
+      "tab": null
+    }
+  }
+]
