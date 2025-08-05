@@ -19,32 +19,43 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-shift-backspace": "workspace::CloseActiveDock"
+      "ctrl-shift-backspace": "workspace::CloseActiveDock",
+      "ctrl-shift-alt-n": "project_symbols::Toggle"
     }
   },
   {
     "context": "Editor",
     "bindings": {
-      "ctrl-shift-backspace": "pane::CloseActiveItem"
+      "ctrl-shift-backspace": "pane::CloseActiveItem",
+      "alt-shift-f10": "editor::SpawnNearestTask"
     }
   },
   {
     "context": "(Workspace || Editor) && vim_mode == normal",
     "bindings": {
-      // copy some things from lazyvim
-      "space space": "file_finder::Toggle",
-      "space f f": "file_finder::Toggle",
-      "space e": "pane::RevealInProjectPanel",
-      "space s g": "workspace::NewSearch",
-      "space c a": "outline_panel::ToggleFocus",
-      "space a c": "agent::ToggleFocus",
-      "space a t": "agent::NewTextThread",
-      "space a k": "agent::Keep",
-      "space a K": "agent::KeepAll",
-      "space a r": "agent::Reject",
-      "space a R": "agent::RejectAll",
+      "ctrl-shift-o": "outline_panel::ToggleFocus",
+      "ctrl-k": "agent::Keep",
+      "ctrl-K": "agent::KeepAll",
+      "ctrl-r": "agent::Reject",
+      "ctrl-R": "agent::RejectAll",
       "'": "vim::RepeatFind",
       ";": ["vim::PushJump", { "line": true }]
+    }
+  },
+  {
+    "context": "VimControl && !Menu",
+    "bindings": {
+      "f": ["vim::PushFindForward", { "before": false, "multiline": false }],
+      "t": ["vim::PushFindForward", { "before": true, "multiline": false }],
+      "shift-f": [
+        "vim::PushFindBackward",
+        { "after": false, "multiline": false }
+      ],
+      "shift-t": [
+        "vim::PushFindBackward",
+        { "after": true, "multiline": false }
+      ],
+      "Y": ["workspace::SendKeystrokes", "y $"]
     }
   },
   {

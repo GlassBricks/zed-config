@@ -7,11 +7,8 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 // To see all of Zed's default settings without changing your
 {
-  "terminal": {
-    "dock": "right"
-  },
   "project_panel": {
-    "hide_gitignore": false
+    "hide_gitignore": true
   },
   "outline_panel": {
     "dock": "right"
@@ -25,17 +22,14 @@
     "mode": "eager"
   },
   "agent": {
-    "inline_assistant_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4"
-    },
     "always_allow_tool_actions": true,
     "default_profile": "write",
     "model_parameters": [],
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-opus-4-thinking"
-    }
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-latest"
+    },
+    "version": "2"
   },
   "base_keymap": "JetBrains",
   "telemetry": {
@@ -75,33 +69,20 @@
     "thumb": "always"
   },
   "experimental.theme_overrides": {
-    // "background.appearance": "transparent",
-    // "background": "#1e1e2eee",
-    // "editor.background": "#1e1e2e44",
-    // "title_bar.background": "#11111bdd", // dd, since does not use background
-    // "toolbar.background": "#1e1e2e44",
-    // "tab_bar.background": "#1e1e2e44",
-    // "terminal.background": "#1e1e2e44",
-    // "editor.gutter.background": "#1e1e2e44",
-    // "tab.inactive_background": "#0b0b1144",
-    // "tab.active_background": "#1e1e2e44",
-    // "panel.background": "#18182544",
-    // "hint.background": "#18182544", // make this darker on purpose
-    // "status_bar.background": "#11111bdd", // dd, since does not use background
-    // "error.background": "#c14568dd",
-    // existing color scheme:
-    // red: "f38ba8"
-    // yellow: "f9e2af"
-
-    "syntax": {
-      "type.builtin": {
-        "color": "#f9e2af",
-        "font_style": "normal"
-      },
-      "parameter": {
-        "color": "#f38ba8"
-      }
-    }
+    "background.appearance": "transparent",
+    "background": "#1e1e2eee",
+    "editor.background": "#1e1e2e44",
+    "title_bar.background": "#11111bdd", // dd, since does not use background
+    "toolbar.background": "#1e1e2e44",
+    "tab_bar.background": "#1e1e2e44",
+    "terminal.background": "#1e1e2e44",
+    "editor.gutter.background": "#1e1e2e44",
+    "tab.inactive_background": "#0b0b1144",
+    "tab.active_background": "#1e1e2e44",
+    "panel.background": "#18182544",
+    "hint.background": "#18182544", // make this darker on purpose
+    "status_bar.background": "#11111bdd", // dd, since does not use background
+    "error.background": "#c14568dd"
   },
   "notification_panel": {
     "dock": "right"
