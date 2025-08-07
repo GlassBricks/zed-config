@@ -59,7 +59,7 @@
     }
   },
   {
-    "context": "Pane",
+    "context": "Pane || Editor",
     "bindings": {
       "alt-left": "pane::ActivatePreviousItem",
       "alt-right": "pane::ActivateNextItem",

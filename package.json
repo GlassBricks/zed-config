@@ -1,0 +1,13 @@
+{
+  "name": "config",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "type": "module",
+  "scripts": {
+    "keymap": "node derive/keymap/write.js"
+  },
+  "dependencies": {
+    "json5": "^2.2.3"
+  }
+}
